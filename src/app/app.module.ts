@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,22 @@ import { NavbarComponent } from './Views/Layouts/navbar/navbar.component';
 import { FooterComponent } from './Views/Layouts/footer/footer.component';
 import { SliderComponent } from './Views/Components/slider/slider.component';
 import { ButtonComponent } from './Views/Components/button/button.component';
+import { CssComponent } from './Views/Layouts/Allboot/css/css.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { MaterialModule } from './Config/material';
+
+
+
+
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+import { LoginComponent } from './Views/Auth/Aut/login/login.component';
+import { RegisterComponent } from './Views/Auth/Aut/register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// register Swiper custom elements
+register();
 
 @NgModule({
   declarations: [
@@ -18,13 +34,21 @@ import { ButtonComponent } from './Views/Components/button/button.component';
     NavbarComponent,
     FooterComponent,
     SliderComponent,
-    ButtonComponent
+    ButtonComponent,
+    CssComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
