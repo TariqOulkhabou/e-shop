@@ -1,2 +1,10 @@
 <app-slider></app-slider>
-<p> this is page home</p>
+<br>
+<div class="api"  *ngFor="let item of myData">
+   
+        <h1>{{item.title}}</h1>
+        <img src={{item.image}}>
+        <p>{{item.description}}</p> 
+        <b>{{item.price}}$</b>
+</div>
+
