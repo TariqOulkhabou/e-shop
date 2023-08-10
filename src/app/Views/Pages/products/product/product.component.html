@@ -1,0 +1,38 @@
+<css></css>
+
+<div class="serach">
+     <input type="text" placeholder="Search" [(ngModel)]="Search">
+</div>
+    <!-- <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">price</th>
+            <th scope="col">description</th>
+            <th scope="col">category</th>
+            <th scope="col">image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let items of products |filter:Search">
+            <th scope="row">{{items.id}}</th>
+            <td>{{items.title}}</td>
+            <td>{{items.price}}<b>$</b></td>
+            <td>{{items.description}}</td>
+            <td>{{items.category}}</td>
+            <td>{{items.image}}</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+      <div class="api-container">
+        <div class="api" *ngFor="let item of products |filter:Search">
+          <img [src]="item.images[0]" style="width: 150px;height: 150px;">
+          <h1>{{item.title}}</h1>
+          <p>{{item.description}}</p>
+          <!-- <h1 style="color: red;">{{item.category}}</h1>       -->
+          <button (click)="addToCart(item.id)">Add To Cart</button>
+          <b>{{item.price}}$</b>
+        </div>
+      </div>

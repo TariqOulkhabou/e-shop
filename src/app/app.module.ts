@@ -12,6 +12,7 @@ import { ButtonComponent } from './Views/Components/button/button.component';
 import { CssComponent } from './Views/Layouts/Allboot/css/css.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { MaterialModule } from './Config/material';
 
@@ -23,6 +24,7 @@ import { register } from 'swiper/element/bundle';
 import { LoginComponent } from './Views/Auth/Aut/login/login.component';
 import { RegisterComponent } from './Views/Auth/Aut/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductComponent } from './Views/Pages/products/product/product.component';
 // register Swiper custom elements
 register();
 
@@ -37,7 +39,8 @@ register();
     ButtonComponent,
     CssComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ register();
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

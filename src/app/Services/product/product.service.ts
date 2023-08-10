@@ -6,12 +6,14 @@ import { Config } from 'src/app/Config';
   providedIn: 'root'
 })
 export class ProductService implements OnInit{
-
+  
   constructor(private http:HttpClient) { }
-  ngOnInit(): void {
-    
+  ngOnInit(): void {     
   }
+
   getAll(){
     return this.http.get(Config.Api);
   }
+
+
 }

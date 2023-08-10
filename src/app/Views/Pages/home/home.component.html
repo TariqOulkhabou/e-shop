@@ -1,11 +1,14 @@
+<navbar></navbar>
+<!-- <router-outlet></router-outlet> -->
 <app-slider></app-slider>
 <br>
 <div class="api-container">
     <div class="api" *ngFor="let item of myData">
       <h1>{{item.title}}</h1>
+      <h1 style="color: red;">{{item.category}}</h1>
       <img src={{item.image}}>
       <p>{{item.description}}</p>
       <b>{{item.price}}$</b>
     </div>
   </div>
-  
+  <footer></footer> 
